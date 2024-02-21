@@ -1,0 +1,61 @@
+#word-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.animate-flip {
+    animation: flip 0.6s ease-in-out;
+}
+
+.word-row {
+    display: flex;
+}
+
+.title{
+    color: white;
+    text-align: center;
+}
+
+.letter-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    caret-color: transparent;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+#keyboard {
+    text-align: center;
+}
+
+.key-row {
+    margin: 5px;
+}
+
+button {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #4e3bf8;
+}

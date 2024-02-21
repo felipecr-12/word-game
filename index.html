@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Palavras</title>
+    <link rel="stylesheet" href="styles.css">
+    <h3 class="title">MY TERMO</h3>
+</head>
+<body>
+    <form id="word-form" method="post">
+        <div id="word-grid">
+            <div class="word-row active-row">
+                <input type="text" maxlength="1" class="letter-box" />
+                <input type="text" maxlength="1" class="letter-box" />
+                <input type="text" maxlength="1" class="letter-box" />
+                <input type="text" maxlength="1" class="letter-box" />
+                <input type="text" maxlength="1" class="letter-box" />
+            </div>
+            <div class="word-row">
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+            </div> 
+            <div class="word-row">
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+            </div>
+            <div class="word-row">
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+            </div>
+            <div class="word-row">
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+            </div>
+            <div class="word-row">
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+                <input type="text" maxlength="1" class="letter-box" disabled />
+            </div>
+            <input type="submit" id="submit-word" value="ENTER" style="text-align: center;"/>
+            <br>
+            <input class="new-word-submit" type="submit" id="new-word" value="Jogar novamente" style="text-align: center; " disabled/>          
+        </div>  
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
