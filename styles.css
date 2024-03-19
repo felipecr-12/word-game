@@ -69,6 +69,8 @@
 
 .enter-button:hover {background-color: #3e8e41}
 
+.new-word-submit:hover {background-color: #8e8a3e}
+
 .enter-button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;

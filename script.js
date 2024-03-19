@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const boxes = document.querySelectorAll('.letter-box');
+    const keys = document.querySelector('.keyboard');
+
+    keys.addEventListener('click', function(e) {
+        if(e.target.classList.contains('keyboard__key')){
+            const selectedKeyText = e.target.innerText;
+            const letterBoxes = document.querySelectorAll('.active-row .letter-box');
+            const emptyBox = Array.from(letterBoxes).find(box => box.value === '');
+
+            if (emptyBox) {
+                emptyBox.value = selectedKeyText;
+            }
+        }
+    });
 
     document.getElementById('submit-word').addEventListener('click', function(event) {
         event.preventDefault();
