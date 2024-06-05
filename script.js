@@ -41,7 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                    updateLetterBoxes(letterInputs, data);
+                    console.log("Palavra enviada: ", word);
+                    if(data !== false){
+                        updateLetterBoxes(letterInputs, data);
+                    }else{
+                        alert("Palavra inválida!");
+                    }
                 })
                 .catch(error => {
                     console.error('Erro ao enviar a palavra:', error);
@@ -81,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
             data.char2.forEach((char, index) => {
                 if(data.char2_position != data.char1_position){
                     const position_2 = data.char2_position[index] - 1;
+                    console.log("Position_2:", position_2 + 1);
                     const currentColor = letterInputs[position_2].style.backgroundColor;
+                    console.log("Cor atual:", currentColor);
                     if (currentColor !== 'green') {
                         console.log("Pintando amarelo letter-box de posicao: ", position_2 + 1)
                         letterInputs[position_2].style.backgroundColor = 'yellow';
