@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
-                    console.log("Palavra enviada: ", word);
+                    //console.log(data);
+                    //console.log("Palavra enviada: ", word);
                     if(data !== false){
                         updateLetterBoxes(letterInputs, data);
                     }else{
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(data.char1 && data.char1_position){
             data.char1.forEach((char, index) => {
                 const position = data.char1_position[index] - 1;
-                console.log("Pintando verde letter-box de posicao: ", position + 1)
+                //console.log("Pintando verde letter-box de posicao: ", position + 1)
                 setTimeout(function(){
                     letterInputs[position].style.backgroundColor = 'green';
                     letterInputs[position].style.color = 'white'; 
@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
             data.char2.forEach((char, index) => {
                 if(data.char2_position != data.char1_position){
                     const position_2 = data.char2_position[index] - 1;
-                    console.log("Position_2:", position_2 + 1);
+                    //console.log("Position_2:", position_2 + 1);
                     const currentColor = letterInputs[position_2].style.backgroundColor;
-                    console.log("Cor atual:", currentColor);
+                    //console.log("Cor atual:", currentColor);
                     if (currentColor !== 'green') {
-                        console.log("Pintando amarelo letter-box de posicao: ", position_2 + 1)
+                        //console.log("Pintando amarelo letter-box de posicao: ", position_2 + 1)
                         letterInputs[position_2].style.backgroundColor = 'yellow';
                     }
                 }

@@ -35,7 +35,7 @@
                     if (($inputS[$j] == $keyS[$i]) && ($i == $j)){
                         $exactlyMatch[] = array("char" => $inputS[$j], "position" => $i + 1);
                     }else if ($inputS[$j] == $keyS[$i]){
-                        $match[] = array("char" => $inputS[$j], "position" => $j + 1);
+                        $match[] = array("char" => $inputS[$j], "position" => $j + 1, "position_linked" => $i + 1);
                     }
                 }  
             }
@@ -44,7 +44,7 @@
             foreach ($match as $entry_2) {
                 $existsInExactlyMatch = false;
                 foreach ($exactlyMatch as $entry) {
-                    if  ($entry_2["position"] == $entry["position"]){
+                    if  ($entry_2["position_linked"] == $entry["position"]){
                         $existsInExactlyMatch = true;
                         break;
                     }
@@ -69,7 +69,8 @@
                 "char1" => $char1,
                 "char1_position" => $char1_position,
                 "char2" => $char2,
-                "char2_position" => $char2_position
+                "char2_position" => $char2_position,
+                "filteredMatch" => $filteredMatch
             ];
 
             echo json_encode($response);
